@@ -10,12 +10,14 @@ COPY . .
 
 RUN yarn build
 
-FROM nginx:alpine AS production
+FROM node:23-alpine AS production
 
-COPY --from=build /app/dist /usr/share/nginx/html
+WORKDIR /app
 
-COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
+RUN yarn global add serve
+
+COPY --from=build /app/dist ./
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["serve", "-s", ".", "-l", "80"]
