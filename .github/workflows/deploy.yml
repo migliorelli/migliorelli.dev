@@ -18,4 +18,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Deploy to VPS 🔥
-        run: ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} ' cd ${{ secrets.DIRECTORY }} && git pull && docker-compose down && docker-compose up -d '
+        run: ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} ' cd ${{ secrets.DIRECTORY }} && git pull origin main && docker-compose down && docker-compose up -d '
