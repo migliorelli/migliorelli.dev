@@ -1,4 +1,8 @@
+<script setup lang="ts">
+import Navbar from "./components/global/Navbar.vue";
+</script>
+
 <template>
-  <a href="https://github.com/migliorelli">github</a>
-  teste
+  <Navbar />
+  <RouterView />
 </template>
