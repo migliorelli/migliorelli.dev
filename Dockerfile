@@ -8,7 +8,8 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn build
+ARG NO_CACHE
+RUN if [ "$NO_CACHE" = "true" ]; then rm -rf /app/dist && yarn build; else yarn build; fi
 
 FROM node:23-alpine AS production
 
