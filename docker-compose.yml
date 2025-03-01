@@ -3,9 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        NO_CACHE: true
-
     container_name: migliorelli.dev
     restart: unless-stopped
     environment:
