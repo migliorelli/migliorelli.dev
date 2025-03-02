@@ -1,8 +1,19 @@
 <script setup lang="ts">
+import Footer from "./components/global/Footer.vue";
 import Navbar from "./components/global/Navbar.vue";
+import AboutMe from "./components/sections/AboutMe.vue";
+import Hero from "./components/sections/Hero.vue";
+import Projects from "./components/sections/Projects.vue";
+import Skills from "./components/sections/Skills.vue";
 </script>
 
 <template>
   <Navbar />
-  <RouterView />
+  <main class="h-full min-h-dvh w-full">
+    <Hero />
+    <AboutMe />
+    <Projects />
+    <Skills />
+  </main>
+  <Footer />
 </template>
