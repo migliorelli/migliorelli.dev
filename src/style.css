@@ -1,12 +1,46 @@
 @import "tailwindcss";
 
-body {
-  margin: 0;
-  min-width: 100%;
-  min-height: 100vh;
+@theme {
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+
+  --color-primary: oklch(60.56% 0.2189 292.72);
+  --color-primary-50: oklch(96.37% 0.0187 292.61);
+  --color-primary-100: oklch(93.44% 0.0354 296.28);
+  --color-primary-200: oklch(88% 0.0648 293.8);
+  --color-primary-300: oklch(79.12% 0.117361 294.0625);
+  --color-primary-400: oklch(68.02% 0.1872 293.47);
+  --color-primary-500: oklch(60.56% 0.2189 292.72);
+  --color-primary-600: oklch(54.13% 0.2466 293.01);
+  --color-primary-700: oklch(49.07% 0.2412 292.58);
+  --color-primary-800: oklch(43.2% 0.2106 292.76);
+  --color-primary-900: oklch(37.96% 0.1783 293.74);
+  --color-primary-950: oklch(28.27% 0.1351 291.09);
 }
 
-#app {
-  width: 100%;
-  height: 100%;
+@layer base {
+  /* * {
+    @apply selection:bg-purple-500/10 selection:text-purple-500;
+  } */
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-jetbrains-mono text-primary-50 m-0 min-h-dvh bg-black antialiased;
+  }
+
+  #app {
+    @apply h-full w-full;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-primary-50 flex min-h-6 w-fit items-center p-2 text-xl transition-colors;
+  }
+
+  .nav-link a {
+    @apply block;
+  }
 }
