@@ -1,5 +1,3 @@
 <template>
-  <section id="projects">
-    projects
-  </section>
+  <section id="projects" class="h-dvh">projects</section>
 </template>
