@@ -18,16 +18,16 @@
 }
 
 @layer base {
-  /* * {
-    @apply selection:bg-purple-500/10 selection:text-purple-500;
-  } */
+  * {
+    @apply selection:bg-primary/50 selection:text-primary-200;
+  }
 
   html {
     @apply scroll-smooth;
   }
 
   body {
-    @apply font-jetbrains-mono text-primary-50 m-0 min-h-dvh bg-black antialiased;
+    @apply font-jetbrains-mono m-0 min-h-dvh bg-black text-slate-300 antialiased;
   }
 
   #app {
@@ -36,11 +36,23 @@
 }
 
 @layer components {
-  .nav-link {
-    @apply text-primary-50 flex min-h-6 w-fit items-center p-2 text-xl transition-colors;
+  .btn {
+    @apply bg-primary hover:bg-primary/80 inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
   }
 
-  .nav-link a {
-    @apply block;
+  .btn-border {
+    @apply hover:bg-primary/10 hover:border-primary/20 border-1 border-gray-200 bg-transparent text-gray-900;
+  }
+
+  .nav-link {
+    @apply hover:text-primary before:bg-primary relative text-sm transition-all duration-200 ease-in-out before:absolute before:-bottom-[4px] before:left-0 before:h-[2px] before:w-full before:max-w-0 before:transition-all before:duration-200 before:ease-in-out hover:before:max-w-full;
+  }
+
+  .ship {
+    @apply bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold [&_svg]:size-4 [&_svg]:shrink-0;
+  }
+
+  .input {
+    @apply focus:ring-primary/20 focus:border-primary w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:outline-none;
   }
 }

@@ -1,159 +1,78 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref, useTemplateRef } from "vue";
+import { Languages } from "lucide-vue-next";
+import { computed } from "vue";
+import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+import Dropdown, { type Option } from "../ui/Dropdown.vue";
 
-const sections = ["hero", "aboutme", "projects", "skills"];
-const observers = ref<IntersectionObserver[]>([]);
-const activeSection = ref("hero");
+const router = useRouter();
 
-const background = useTemplateRef("background");
-const listContainer = useTemplateRef("list-container");
-const listContainerCoords = computed(() => {
-  let x = 0;
-  let y = 0;
+const { locale, t } = useI18n();
+const basePath = computed(() => {
+  return locale.value === "pt-BR" ? "/" : "/en";
+});
 
-  if (listContainer.value) {
-    const rect = listContainer.value.getBoundingClientRect();
-    [x, y] = [rect.x, rect.y];
+const locales = computed(() => [
+  { key: "pt-BR", value: t("languages.pt") },
+  { key: "en", value: t("languages.en") },
+]);
+
+const changeLocale = (option: Option) => {
+  locale.value = option.key;
+
+  const newPath = option.key === "pt-BR" ? "/" : "/en";
+  if (router.currentRoute.value.path !== newPath) {
+    router.push(newPath);
   }
-
-  return { x, y };
-});
-
-const handleLogoClick = (event: MouseEvent) => {
-  if (!event.ctrlKey && !event.metaKey && event.button === 0) {
-    event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    parent.location.hash = "";
-  }
 };
-
-const getCoords = (rect: DOMRect) => {
-  return {
-    x: rect.x - listContainerCoords.value.x,
-    y: rect.y - listContainerCoords.value.y,
-  };
-};
-
-const handleMouseEnter = (event: MouseEvent) => {
-  if (!event.target || !background.value) return;
-  const el = event.target as HTMLElement;
-  const rect = el.getBoundingClientRect();
-  const coords = getCoords(rect);
-
-  background.value.style.top = `${coords.y}px`;
-  background.value.style.width = `${rect.width}px`;
-
-  const activeLink = document.querySelector(".nav-link.active");
-  if (activeLink) activeLink.classList.remove("active");
-
-  el.classList.add("active");
-};
-
-const handleMouseLeave = (event: MouseEvent) => {
-  const activeEl = document.querySelector(
-    `.nav-link#navlink-${activeSection.value}`,
-  );
-
-  if (!event.target || !background.value || !activeEl) return;
-
-  document.querySelectorAll(".nav-link").forEach((link) => {
-    link.classList.remove("active");
-  });
-
-  const rect = activeEl.getBoundingClientRect();
-  const coords = getCoords(rect);
-
-  background.value.style.top = `${coords.y}px`;
-  background.value.style.width = `${rect.width}px`;
-
-  activeEl.classList.add("active");
-};
-
-onMounted(() => {
-  sections.forEach((section) => {
-    const sectionElement = document.querySelector(`section#${section}`);
-    if (sectionElement) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          const navLink = document.querySelector(
-            `.nav-link#navlink-${section}`,
-          );
-
-          if (!navLink || !background.value) return;
-
-          if (entry.isIntersecting) {
-            document.querySelectorAll(".nav-link").forEach((link) => {
-              link.classList.remove("active");
-            });
-
-            const rect = navLink.getBoundingClientRect();
-            const coords = getCoords(rect);
-
-            background.value.style.top = `${coords.y}px`;
-            background.value.style.width = `${rect.width}px`;
-
-            navLink.classList.add("active");
-            activeSection.value = sectionElement.id;
-          }
-        },
-        {
-          root: null,
-          threshold: 0.5,
-        },
-      );
-
-      observer.observe(sectionElement);
-    }
-  });
-});
-
-onUnmounted(() => {
-  observers.value.forEach((observer) => observer.disconnect());
-});
 </script>
 
 <template>
-  <nav class="fixed top-1/2 left-4 -translate-y-1/2">
-    <div class="relative" ref="list-container">
-      <div
-        ref="background"
-        class="bg-primary absolute -z-1 box-content h-6 w-full rounded-full py-2 transition-all"
-      ></div>
+  <header
+    class="fixed top-0 left-0 z-50 h-18 w-full bg-black/60 backdrop-blur-xs"
+  >
+    <nav
+      class="container mx-auto flex h-full w-full gap-8 p-4 px-4 md:content-center"
+    >
+      <div class="mr-auto flex items-center justify-start">
+        <RouterLink :to="basePath" class="nav-link text-lg font-semibold">
+          <span class="text-primary">migliorelli</span>
+          <span class="text-white">.dev</span>
+        </RouterLink>
+      </div>
 
-      <ul class="space-y-2">
-        <li
-          class="nav-link group"
-          id="navlink-hero"
-          @mouseenter="handleMouseEnter"
-          @mouseleave="handleMouseLeave"
-        >
-          <a href="/" @click="handleLogoClick">migliorelli.dev</a>
+      <ul class="hidden items-center justify-center gap-8 md:flex">
+        <li>
+          <RouterLink to="#aboutme" class="nav-link">
+            {{ t("navbar.aboutme") }}
+          </RouterLink>
         </li>
-        <li
-          class="nav-link"
-          id="navlink-aboutme"
-          @mouseenter="handleMouseEnter"
-          @mouseleave="handleMouseLeave"
-        >
-          <a href="#aboutme">About me</a>
+        <li>
+          <RouterLink to="#projects" class="nav-link">
+            {{ t("navbar.projects") }}
+          </RouterLink>
         </li>
-        <li
-          class="nav-link"
-          id="navlink-projects"
-          @mouseenter="handleMouseEnter"
-          @mouseleave="handleMouseLeave"
-        >
-          <a href="#projects">Projects</a>
+        <li>
+          <RouterLink to="#skills" class="nav-link">
+            {{ t("navbar.skills") }}
+          </RouterLink>
         </li>
-        <li
-          class="nav-link"
-          id="navlink-skills"
-          @mouseenter="handleMouseEnter"
-          @mouseleave="handleMouseLeave"
-        >
-          <a href="#skills">Skills</a>
+        <li>
+          <RouterLink to="#socials" class="nav-link">
+            {{ t("navbar.socials") }}
+          </RouterLink>
         </li>
       </ul>
-    </div>
-  </nav>
+
+      <div class="my-auto">
+        <Dropdown
+          @change="changeLocale"
+          :selected-key="locale"
+          :options="locales"
+        >
+          <Languages :size="16" class="text-slate-300" />
+        </Dropdown>
+      </div>
+    </nav>
+  </header>
 </template>
