@@ -3,18 +3,6 @@ import { Github, Linkedin, Mail, Phone } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
-
-const sendMessage = (e: Event) => {
-  const form = e.target as HTMLFormElement;
-  const data = new FormData(form);
-
-  const nome = data.get("nome");
-  const email = data.get("email");
-  const tel = data.get("tel");
-  const mensagem = data.get("mensagem");
-
-  console.log(nome, email, tel, mensagem);
-};
 </script>
 
 <template>
