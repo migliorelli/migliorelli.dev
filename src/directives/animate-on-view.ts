@@ -20,9 +20,10 @@ const animateOnView: Directive<
       threshold: binding.value?.threshold ?? 0.2,
       enter:
         binding.value?.enter ??
-        "transition translate-y-0 opacity-100",
+        "transition-[transform, opacity] translate-y-0 opacity-100",
       exit:
-        binding.value?.exit ?? "transition translate-y-12 opacity-0",
+        binding.value?.exit ??
+        "transition-[transform, opacity] translate-y-12 opacity-0",
       once: binding.value?.once !== false,
       delay: binding.value?.delay || 0,
       duration: binding.value?.duration || 1000,
