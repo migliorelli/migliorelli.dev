@@ -9,5 +9,3 @@ services:
       - NODE_ENV=production
     ports:
       - "3000:80"
-    volumes: 
-      - .:/usr/src/migliorelli.dev
