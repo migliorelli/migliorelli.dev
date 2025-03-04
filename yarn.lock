@@ -213,6 +213,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lottiefiles/dotlottie-vue@^0.5.6":
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/dotlottie-vue/-/dotlottie-vue-0.5.6.tgz#c50d683789b740dab65388839db638f4ea17a36e"
+  integrity sha512-qOnkbGq059rx5sO34woXVk/8XzOlX33is+1o8o8jetCwYm7QyAwmWLHyj6de7eQBCsP5dHOchuDKb7GUtVLIRQ==
+  dependencies:
+    "@lottiefiles/dotlottie-web" "0.40.1"
+
+"@lottiefiles/dotlottie-web@0.40.1":
+  version "0.40.1"
+  resolved "https://registry.yarnpkg.com/@lottiefiles/dotlottie-web/-/dotlottie-web-0.40.1.tgz#b31c7b4de339607246e66d56babcf99ad8fda486"
+  integrity sha512-iNz1rr8zRTSJ0xCZEPeoCX6YnaNhBdkF7gJWhSa8bwB4NTrYZm0vAuC0jF/aLLhU7q9nf6ykxffrz0Sf4JPSPg==
+
 "@rollup/rollup-android-arm-eabi@4.34.8":
   version "4.34.8"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.34.8.tgz#731df27dfdb77189547bcef96ada7bf166bbb2fb"
