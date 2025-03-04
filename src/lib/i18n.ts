@@ -82,6 +82,20 @@ const messages = {
           "Tecnologias e ferramentas adicionais que utilizo para complementar o desenvolvimento das minhas aplicações",
       },
     },
+    footer: {
+      links: "Links rápidos",
+      home: "Início",
+      aboutme: "Sobre Mim",
+      projects: "Projetos",
+      skills: "Habilidades",
+      social: "Redes sociais",
+      rights: "Todos os direitos reservados.",
+      about: {
+        title: "Sobre Mim",
+        description:
+          "Desenvolvedor web fullstack especializado em React, Vue, Express.js e Typescript. Projetos responsivos e soluções web modernas.",
+      },
+    },
   },
   en: {
     languages: {
@@ -162,6 +176,21 @@ const messages = {
         title: "Other Technologies",
         description:
           "Additional technologies and tools I use to complement the development of my applications",
+      },
+    },
+
+    footer: {
+      links: "Rapid links",
+      home: "Home",
+      aboutme: "About Me",
+      projects: "Projects",
+      skills: "Skills",
+      social: "Socials",
+      rights: "All rights reserved.",
+      about: {
+        title: "About Me",
+        description:
+          "Fullstack web developer specialized in React, Vue, Express.js and TypeScript. Responsive projects and modern web solutions.",
       },
     },
   },
