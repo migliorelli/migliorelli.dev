@@ -9,7 +9,7 @@ import Skills from "../components/sections/Skills.vue";
 
 <template>
   <Navbar />
-  <main class="w-full pt-18">
+  <main class="bg-dots w-full">
     <Hero />
     <AboutMe />
     <Projects />

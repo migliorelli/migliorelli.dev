@@ -55,4 +55,8 @@
   .input {
     @apply focus:ring-primary/20 focus:border-primary w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:outline-none;
   }
+
+  .bg-dots {
+    @apply inset-0 h-full w-full bg-transparent bg-[radial-gradient(theme("colors.slate.900")_1px,transparent_1px)] [background-size:30px_30px];
+  }
 }
