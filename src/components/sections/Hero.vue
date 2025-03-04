@@ -91,7 +91,7 @@ onMounted(() => {
           >
             <Download /> {{ t("hero.resume") }}
           </a>
-          <RouterLink to="#socials" class="btn btn-border">
+          <RouterLink to="#contact" class="btn btn-border">
             <Share2 /> {{ t("hero.getintouch") }}
           </RouterLink>
         </div>

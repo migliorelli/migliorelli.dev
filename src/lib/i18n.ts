@@ -11,7 +11,7 @@ const messages = {
       aboutme: "Sobre mim",
       projects: "Projetos",
       skills: "Habilidades",
-      socials: "Social",
+      contact: "Contato",
     },
 
     hero: {
@@ -82,6 +82,13 @@ const messages = {
           "Tecnologias e ferramentas adicionais que utilizo para complementar o desenvolvimento das minhas aplicações",
       },
     },
+
+    contact: {
+      title: `Entre em <span class="text-primary-400">contato</span>`,
+      description: "Estou ansioso para trabalhar com você!",
+      phone: "Telefone",
+    },
+
     footer: {
       links: "Links rápidos",
       home: "Início",
@@ -107,7 +114,7 @@ const messages = {
       aboutme: "About me",
       projects: "Projects",
       skills: "Skills",
-      socials: "Socials",
+      contact: "Contact",
     },
 
     hero: {
@@ -177,6 +184,11 @@ const messages = {
         description:
           "Additional technologies and tools I use to complement the development of my applications",
       },
+    },
+    contact: {
+      title: `Get in <span class="text-primary-400">touch</span>`,
+      description: "I look forward to working with you!",
+      phone: "Phone",
     },
 
     footer: {

@@ -59,8 +59,8 @@ const changeLocale = (option: Option) => {
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="#socials" class="nav-link">
-            {{ t("navbar.socials") }}
+          <RouterLink to="#contact" class="nav-link">
+            {{ t("navbar.contact") }}
           </RouterLink>
         </li>
       </ul>
