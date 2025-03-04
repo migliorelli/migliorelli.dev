@@ -2,6 +2,7 @@
 import { Download, Share2 } from "lucide-vue-next";
 import { computed, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import HeroArt from "../HeroArt.vue";
 
 const { t, locale } = useI18n();
 
@@ -96,7 +97,9 @@ onMounted(() => {
           </RouterLink>
         </div>
       </div>
-      <div class="hidden md:block"></div>
+      <div class="hidden md:grid md:place-items-center" v-animate-on-view>
+        <HeroArt />
+      </div>
     </div>
   </section>
 </template>
