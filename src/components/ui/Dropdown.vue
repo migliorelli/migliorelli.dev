@@ -66,7 +66,7 @@ onUnmounted(() => {
     >
       <div
         v-if="open"
-        class="ring-opacity-5 absolute right-0 z-10 mt-2 min-w-34 origin-top-right divide-y divide-gray-600 rounded-md bg-slate-200/20 ring-1 shadow-lg ring-black backdrop-blur-md focus:outline-none"
+        class="absolute right-0 z-10 mt-2 min-w-34 origin-top-right divide-y divide-gray-600 rounded-md bg-neutral-800 shadow-lg backdrop-blur-md focus:outline-none"
         role="menu"
         aria-orientation="vertical"
       >
@@ -75,7 +75,7 @@ onUnmounted(() => {
             v-for="option in options"
             :key="option.key"
             @click="handleClick(option)"
-            class="group flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-white transition-colors duration-150 hover:bg-slate-200/20"
+            class="group flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-white transition-colors duration-150 hover:bg-neutral-700"
             role="menuitem"
           >
             {{ option.value }}
