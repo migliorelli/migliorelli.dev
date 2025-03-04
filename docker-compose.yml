@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: miguelmib/migliorelli.dev:latest
     container_name: migliorelli.dev
     restart: unless-stopped
     environment:
