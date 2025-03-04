@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Download, Share2 } from "lucide-vue-next";
 import { computed, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
@@ -49,7 +50,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="h-dvh bg-black">
+  <section id="hero" class="h-dvh">
     <div class="grid h-full w-full px-4 md:grid-cols-2 md:px-18">
       <div class="flex h-full max-w-xl flex-col justify-center pb-18">
         <div class="mb-8 space-y-4">
@@ -63,6 +64,7 @@ onMounted(() => {
             Miguel Migliorelli
           </h1>
         </div>
+
         <div class="space-y-2">
           <h2
             class="pr-2 font-mono text-2xl break-words"
@@ -78,6 +80,23 @@ onMounted(() => {
           >
             {{ t("hero.description") }}
           </p>
+        </div>
+
+        <div
+          class="mt-8 flex flex-col justify-start gap-4 md:flex-row"
+          v-animate-on-view="{ delay: 400 }"
+        >
+          <a
+            :href="`/curriculo-${locale}.pdf`"
+            download
+            target="_blank"
+            class="btn"
+          >
+            <Download /> {{ t("hero.resume") }}
+          </a>
+          <RouterLink to="#socials" class="btn btn-border">
+            <Share2 /> {{ t("hero.getintouch") }}
+          </RouterLink>
         </div>
       </div>
       <div></div>

@@ -20,7 +20,9 @@ const messages = {
       roles:
         "Desenvolvedor Fullstack//Programador Mobile//Apaixonado por Tecnologia//Mestre em Resolver Desafios",
       description:
-        "Desenvolvedor web fullstack especializado em React, Vue, Node.js, TypeScript e JavaScript. Projetos responsivos e soluções web modernas. ",
+        "Desenvolvedor web fullstack especializado em React, Vue, Express.js e Typescript. Projetos responsivos e soluções web modernas. ",
+      resume: "Baixar currículo",
+      getintouch: "Entrar em contato",
     },
   },
   en: {
@@ -42,7 +44,9 @@ const messages = {
       roles:
         "Fullstack Developer//Mobile App Developer//Tech Enthusiast//Problem Solver",
       description:
-        "Fullstack web developer specialized in React, Vue, Node.js, TypeScript and JavaScript. Responsive projects and modern web solutions.",
+        "Fullstack web developer specialized in React, Vue, Express.js and TypeScript. Responsive projects and modern web solutions.",
+      resume: "Download resume",
+      getintouch: "Get in touch",
     },
   },
 };
