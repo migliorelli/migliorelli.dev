@@ -39,8 +39,16 @@ const { t } = useI18n();
             'MongoDB',
           ]"
           image="/projects/fartic.png"
-          href="https://fartic.migliorelli.dev"
           github="https://github.com/migliorelli/fartic"
+        />
+
+        <ProjectCard
+          :title="t('projects.lolrandom.title')"
+          :description="t('projects.lolrandom.description')"
+          :techs="['Vue', 'Lucide', 'Axios', 'DataDragon API']"
+          image="/projects/lolrandom.png"
+          href="https://lolrandom.migliorelli.dev"
+          github="https://github.com/migliorelli/lol-skin-randomizer"
         />
 
         <ProjectCard
@@ -57,15 +65,6 @@ const { t } = useI18n();
           :techs="['Javascript', 'Twitch Extension', 'StreamElements API']"
           image="/projects/tunein.png"
           github="https://github.com/migliorelli/tune-in"
-        />
-
-        <ProjectCard
-          :title="t('projects.lolrandom.title')"
-          :description="t('projects.lolrandom.description')"
-          :techs="['Vue', 'Lucide', 'Axios', 'DataDragon API']"
-          image="/projects/lolrandom.png"
-          href="https://lolrandom.migliorelli.dev"
-          github="https://github.com/migliorelli/lol-skin-randomizer"
         />
       </div>
     </div>
