@@ -20,7 +20,7 @@ const messages = {
       roles:
         "Desenvolvedor Fullstack//Desenvolvedor MEVN/MERN//Programador Mobile//Apaixonado por Tecnologia",
       description:
-        "Desenvolvedor web fullstack especializado em React, Vue, Express.js e Typescript. Projetos responsivos e soluções web modernas. ",
+        "Desenvolvedor web fullstack especializado em React, Vue, Express.js e Typescript. Projetos responsivos e soluções web modernas.",
       resume: "Baixar currículo",
       getintouch: "Entrar em contato",
     },
