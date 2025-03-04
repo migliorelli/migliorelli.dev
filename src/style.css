@@ -37,11 +37,11 @@
 
 @layer components {
   .btn {
-    @apply bg-primary hover:bg-primary/80 inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
+    @apply bg-primary hover:bg-primary/80 inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
   }
 
   .btn-border {
-    @apply hover:bg-primary/10 hover:border-primary/20 border-1 border-gray-200 bg-transparent text-gray-900;
+    @apply hover:bg-primary/30 hover:border-primary border-1 border-slate-300 bg-slate-300/10 text-slate-300;
   }
 
   .nav-link {
