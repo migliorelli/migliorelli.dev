@@ -49,7 +49,7 @@
   }
 
   .ship {
-    @apply bg-primary/10 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold [&_svg]:size-4 [&_svg]:shrink-0;
+    @apply bg-primary/20 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold [&_svg]:size-4 [&_svg]:shrink-0;
   }
 
   .input {
