@@ -18,7 +18,7 @@ const techs = [
 <template>
   <section id="aboutme" class="py-18">
     <div class="container mx-auto space-y-8 px-4">
-      <div class="flex gap-4 text-5xl" v-animate-on-view="">
+      <div class="flex gap-4 text-5xl" v-animate-on-view>
         <div class="size-[1em] md:hidden">
           <img src="/migliorelli.png" class="size-full rounded-lg" />
         </div>
