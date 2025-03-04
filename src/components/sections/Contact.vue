@@ -31,7 +31,7 @@ const sendMessage = (e: Event) => {
               {{ t("contact.description") }}
             </p>
 
-            <div class="grid grid-cols-2">
+            <div class="grid md:grid-cols-2">
               <a
                 href="tel:+5527996475223"
                 class="hover:bg-primary/20 flex items-center gap-4 rounded-lg p-2"
