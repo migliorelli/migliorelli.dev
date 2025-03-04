@@ -2,11 +2,6 @@ import { createI18n } from "vue-i18n";
 
 const messages = {
   "pt-BR": {
-    languages: {
-      pt: "Português",
-      en: "Inglês",
-    },
-
     navbar: {
       aboutme: "Sobre mim",
       projects: "Projetos",
@@ -105,11 +100,6 @@ const messages = {
     },
   },
   en: {
-    languages: {
-      pt: "Portuguese",
-      en: "English",
-    },
-
     navbar: {
       aboutme: "About me",
       projects: "Projects",
