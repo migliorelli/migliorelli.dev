@@ -61,6 +61,27 @@ const messages = {
           "Um site para ajudar a escolher seu campeão e skin de League of Legends.",
       },
     },
+
+    skills: {
+      chip: "Habilidades e Ferramentas",
+      main: {
+        title: "Principais Tecnologias",
+        description: "Tecnologias que utilizo em todas as minhas aplicações",
+      },
+      backend: {
+        title: "Backend",
+        description: "Tecnologias utilizadas para o backend das aplicações",
+      },
+      tools: {
+        title: "Ferramentas",
+        description: "Ferramentas essenciais para o desenvolvimento e deploy",
+      },
+      outro: {
+        title: "Outras Tecnologias",
+        description:
+          "Tecnologias e ferramentas adicionais que utilizo para complementar o desenvolvimento das minhas aplicações",
+      },
+    },
   },
   en: {
     languages: {
@@ -120,6 +141,27 @@ const messages = {
         title: "League of Legends Randomizer",
         description:
           "A website to help you choose your League of Legends champion and skin.",
+      },
+    },
+
+    skills: {
+      chip: "Skills and Tools",
+      main: {
+        title: "Main Technologies",
+        description: "Technologies I use in all of my applications",
+      },
+      backend: {
+        title: "Backend",
+        description: "Technologies used for the backend of applications",
+      },
+      tools: {
+        title: "Tools",
+        description: "Essential tools for development and deployment",
+      },
+      outro: {
+        title: "Other Technologies",
+        description:
+          "Additional technologies and tools I use to complement the development of my applications",
       },
     },
   },
