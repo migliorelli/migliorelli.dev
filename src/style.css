@@ -41,7 +41,7 @@
   }
 
   .btn-border {
-    @apply hover:bg-primary/30 hover:border-primary border-1 border-slate-300 bg-slate-300/10 text-slate-300;
+    @apply hover:bg-primary/20 border-primary text-primary border-1 bg-transparent;
   }
 
   .nav-link {
