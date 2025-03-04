@@ -24,12 +24,17 @@ const router = createRouter({
       meta: { locale: "en" },
     },
   ],
-  scrollBehavior(to) {
+  scrollBehavior(to, from) {
     let el = "";
+    const locales = ["/", "/en"];
+
+    if (to.path !== from.path && from.name !== "NotFound") {
+      return {};
+    }
 
     if (to.hash) {
       el = to.hash;
-    } else if (to.path === "/" || to.path === "/en") {
+    } else if (locales.includes(to.path)) {
       el = "#hero";
     }
 
