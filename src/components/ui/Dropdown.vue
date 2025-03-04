@@ -9,6 +9,7 @@ export interface Option {
 interface Props {
   options: Option[];
   buttonClass?: string;
+  optionClass?: string;
   selectedKey?: string;
   placeholder?: string;
 }
@@ -75,7 +76,7 @@ onUnmounted(() => {
             v-for="option in options"
             :key="option.key"
             @click="handleClick(option)"
-            class="group flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-white transition-colors duration-150 hover:bg-neutral-700"
+            :class="`group flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-white transition-colors duration-150 hover:bg-neutral-700 ${optionClass}`"
             role="menuitem"
           >
             {{ option.value }}
