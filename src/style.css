@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  unicode-range: U+1F1E6-1F1FF;
+  src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+}
+
 @theme {
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+
+  --font-emoji:
+    "NotoColorEmojiLimited", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 
   --color-primary: oklch(60.56% 0.2189 292.72);
   --color-primary-50: oklch(96.37% 0.0187 292.61);
