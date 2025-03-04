@@ -41,8 +41,11 @@ const techs = [
         </div>
 
         <div class="hidden justify-center md:flex" v-animate-on-view>
-          <div class="size-80">
-            <img src="/migliorelli.png" class="w-full rounded-lg" />
+          <div class="group size-80 overflow-hidden rounded-lg">
+            <img
+              src="/migliorelli.png"
+              class="w-full rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
+            />
           </div>
         </div>
       </div>
