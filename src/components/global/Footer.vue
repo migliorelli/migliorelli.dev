@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Github, Linkedin, Mail, Twitter } from "lucide-vue-next";
+import { Github, Instagram, Linkedin, Mail } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
@@ -13,7 +13,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/migliorelli",
+    href: "https://linkedin.com/in/miguelmigliorelli",
   },
   {
     name: "Email",
@@ -21,9 +21,9 @@ const socialLinks = [
     href: "mailto:miguel@migliorelli.dev",
   },
   {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com/migliorelli",
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/miguel.mib/",
   },
 ];
 </script>
