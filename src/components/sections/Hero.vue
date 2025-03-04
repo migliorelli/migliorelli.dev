@@ -84,7 +84,7 @@ onMounted(() => {
           v-animate-on-view="{ delay: 400 }"
         >
           <a
-            :href="`/curriculo-${locale}.pdf`"
+            :href="`/resumes/miguelmigliorelli-${locale}.pdf`"
             download
             target="_blank"
             class="btn"
