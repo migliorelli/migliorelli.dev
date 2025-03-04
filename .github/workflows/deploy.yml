@@ -18,12 +18,11 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push to  Docker Hub 🔐
+      - name: Build and push to Docker Hub 🔐
         uses: docker/build-push-action@v5
         with:
-          context: .
           push: true
-          tags: migliorelli.dev:latest
+          tags: miguelmib/migliorelli.dev:latest
 
       - name: Deploy to VPS 🚀
         uses: appleboy/ssh-action@v1.0.3
