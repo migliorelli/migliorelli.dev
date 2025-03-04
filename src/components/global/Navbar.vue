@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Languages } from "lucide-vue-next";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
@@ -14,8 +13,8 @@ const basePath = computed(() => {
 });
 
 const locales = computed(() => [
-  { key: "pt-BR", value: t("languages.pt") },
-  { key: "en", value: t("languages.en") },
+  { key: "pt-BR", value: "🇧🇷 Português" },
+  { key: "en", value: "🇬🇧 English" },
 ]);
 
 const changeLocale = (option: Option) => {
@@ -69,9 +68,11 @@ const changeLocale = (option: Option) => {
         <Dropdown
           @change="changeLocale"
           :selected-key="locale"
+          button-class="size-8 font-emoji"
+          option-class="font-emoji"
           :options="locales"
         >
-          <Languages :size="16" class="text-slate-300" />
+          {{ locale === "pt-BR" ? "🇧🇷" : "🇬🇧" }}
         </Dropdown>
       </div>
     </nav>
