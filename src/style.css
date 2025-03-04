@@ -48,7 +48,7 @@
     @apply hover:text-primary before:bg-primary relative text-sm transition-all duration-200 ease-in-out before:absolute before:-bottom-[4px] before:left-0 before:h-[2px] before:w-full before:max-w-0 before:transition-all before:duration-200 before:ease-in-out hover:before:max-w-full;
   }
 
-  .ship {
+  .chip {
     @apply bg-primary/20 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold [&_svg]:size-4 [&_svg]:shrink-0;
   }
 
@@ -58,5 +58,9 @@
 
   .bg-dots {
     @apply inset-0 h-full w-full bg-transparent bg-[radial-gradient(theme("colors.slate.900")_1px,transparent_1px)] [background-size:30px_30px];
+  }
+
+  .btn-circle {
+    @apply aspect-square rounded-full bg-purple-500/2 p-1;
   }
 }

@@ -50,7 +50,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class=" h-dvh pt-18">
+  <section id="hero" class="h-dvh pt-18">
     <div class="container mx-auto grid h-full w-full px-4 md:grid-cols-2">
       <div class="flex h-full max-w-xl flex-col justify-center pb-18">
         <div class="mb-8 space-y-4">
