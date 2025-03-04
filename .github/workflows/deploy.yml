@@ -25,6 +25,7 @@ jobs:
           tags: miguelmib/migliorelli.dev:latest
 
       - name: Deploy to VPS 🚀
+        timeout-minutes: 30
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
