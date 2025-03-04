@@ -50,8 +50,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="hero" class="h-dvh">
-    <div class="grid h-full w-full px-4 md:grid-cols-2 md:px-18">
+  <section id="hero" class=" h-dvh pt-18">
+    <div class="container mx-auto grid h-full w-full px-4 md:grid-cols-2">
       <div class="flex h-full max-w-xl flex-col justify-center pb-18">
         <div class="mb-8 space-y-4">
           <p class="text-primary" v-animate-on-view>
@@ -74,10 +74,7 @@ onMounted(() => {
             <span class="text-primary">{{ currentRole }}</span>
             <span class="animate-pulse">|</span>
           </h2>
-          <p
-            class="text-medium text-gray-300"
-            v-animate-on-view="{ delay: 300 }"
-          >
+          <p class="text-lg text-gray-300" v-animate-on-view="{ delay: 300 }">
             {{ t("hero.description") }}
           </p>
         </div>
@@ -99,7 +96,7 @@ onMounted(() => {
           </RouterLink>
         </div>
       </div>
-      <div></div>
+      <div class="hidden md:block"></div>
     </div>
   </section>
 </template>
