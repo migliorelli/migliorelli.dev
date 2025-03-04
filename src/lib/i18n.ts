@@ -20,7 +20,7 @@ const messages = {
       roles:
         "Desenvolvedor Fullstack//Programador Mobile//Apaixonado por Tecnologia//Mestre em Resolver Desafios",
       description:
-        "Criando experiências digitais envolventes e perfeitas, eu misturo conhecimento técnico com resolução criativa de problemas. Minha paixão está em construir aplicativos da web que sejam eficientes, acessíveis e deixem um impacto duradouro nos usuários.",
+        "Desenvolvedor web fullstack especializado em React, Vue, Node.js, TypeScript e JavaScript. Projetos responsivos e soluções web modernas. ",
     },
   },
   en: {
@@ -42,7 +42,7 @@ const messages = {
       roles:
         "Fullstack Developer//Mobile App Developer//Tech Enthusiast//Problem Solver",
       description:
-        "Crafting seamless and engaging digital experiences, I blend technical expertise with creative problem-solving. My passion lies in building web applications that are efficient, accessible, and leave a lasting impact on users.",
+        "Fullstack web developer specialized in React, Vue, Node.js, TypeScript and JavaScript. Responsive projects and modern web solutions.",
     },
   },
 };
