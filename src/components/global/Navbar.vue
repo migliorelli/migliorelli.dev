@@ -2,10 +2,11 @@
 import { Languages } from "lucide-vue-next";
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import Dropdown, { type Option } from "../ui/Dropdown.vue";
 
 const router = useRouter();
+const route = useRoute();
 
 const { locale, t } = useI18n();
 const basePath = computed(() => {
@@ -22,7 +23,7 @@ const changeLocale = (option: Option) => {
 
   const newPath = option.key === "pt-BR" ? "/" : "/en";
   if (router.currentRoute.value.path !== newPath) {
-    router.push(newPath);
+    router.push(newPath + route.hash);
   }
 };
 </script>
