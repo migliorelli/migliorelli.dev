@@ -33,32 +33,17 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.DIRECTORY }}
+
+            docker compose ps -q | xargs -I {} docker commit {} migliorelli.dev:backup
+
             git pull origin deploy
             docker compose down
             docker compose pull
             docker compose up -d --build
 
-      # - name: Log in to Docker Hub 🔐
-      #   run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-      # - name: Build Docker image 🏗️
-      #   run: |
-      #     docker build -t --no-cache migliorelli.dev:latest .
-      #     docker save migliorelli.dev:latest | gzip >  migliorelli.dev.tar.gz
-
-      # - name: Set up SSH 🔑
-      #   uses: webfactory/ssh-agent@v0.7.0
-      #   with:
-      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      # - name: Copy Docker image to VPS 📦
-      #   run: scp -o StrictHostKeyChecking=no migliorelli.dev.tar.gz ${{ secrets.USER }}@${{ secrets.HOST }}:~/ migliorelli.dev.tar.gz
-
-      # - name: Deploy to VPS 🚀
-      #   run: |
-      #     ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} << 'EOF'
-      #       docker load < ~/ migliorelli.dev.tar.gz
-      #       cd ${{ secrets.DIRECTORY }}
-      #       docker compose down
-      #       docker compose up -d
-      #     EOF
+            if ! curl -f http://localhost; then
+              echo "Deploy failed, reverting to backup..."
+              docker compose down
+              docker run -d --name migliorelli.dev migliorelli.dev:backup
+              docker compose up -d
+            fi
