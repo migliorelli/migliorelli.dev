@@ -30,6 +30,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd ${{ secrets.DIRECTORY }}
@@ -45,5 +46,5 @@ jobs:
               echo "Deploy failed, reverting to backup..."
               docker compose down
               docker run -d --name migliorelli.dev migliorelli.dev:backup
-              docker compose up -d
+              docker compose up
             fi
