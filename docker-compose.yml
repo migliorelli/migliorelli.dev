@@ -10,3 +10,9 @@ services:
       - NODE_ENV=production
     ports:
       - "3000:80"
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
