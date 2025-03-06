@@ -42,10 +42,3 @@ jobs:
             docker compose down
             docker compose pull
             docker compose up -d
-
-            if ! curl -f http://localhost:3000; then
-              echo "Deploy failed, reverting to backup..."
-              docker compose down
-              docker run -d --name migliorelli.dev migliorelli.dev:backup
-              docker compose up
-            fi
