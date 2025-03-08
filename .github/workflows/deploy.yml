@@ -22,9 +22,9 @@ jobs:
       - name: Build and push to Docker Hub 🔐
         uses: docker/build-push-action@v5
         with:
-          push: true
-          tags: miguelmib/migliorelli.dev:latest
+          tags: ${{ secrets.DOCKERHUB_TAG }}
           no-cache: true
+          push: true
 
       - name: Deploy to VPS 🚀
         uses: appleboy/ssh-action@v1.0.3
@@ -34,8 +34,10 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ${{ secrets.DIRECTORY }}
+            cd ${{ secrets.PROJECT_DIR }}
             git pull origin deploy
+
             docker compose down
             docker compose pull
             docker compose up -d
+            docker cp ${{ secrets.CONTAINER_NAME }}:/robots.txt ${{ secrets.ROBOTS_PATH }}
