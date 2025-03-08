@@ -13,6 +13,7 @@ export default defineConfig({
       outDir: "dist",
       i18n: {
         defaultLanguage: "pt-BR",
+        strategy: "prefix",
         languages: ["pt-BR", "en"],
       },
     }),
