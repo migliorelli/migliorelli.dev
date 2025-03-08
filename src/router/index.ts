@@ -51,11 +51,6 @@ router.beforeEach((to, _from, next) => {
     i18n.global.locale.value = to.meta.locale as "pt-BR" | "en";
   }
 
-  if (to.path === "/robots.txt") {
-    window.location.href = to.path;
-    return;
-  }
-
   next();
 });
 
