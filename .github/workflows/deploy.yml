@@ -40,4 +40,4 @@ jobs:
             docker compose down
             docker compose pull
             docker compose up -d
-            docker cp ${{ secrets.CONTAINER_NAME }}:/robots.txt ${{ secrets.ROBOTS_PATH }}
+            docker cp ${{ secrets.CONTAINER_NAME }}:/app/robots.txt ${{ secrets.ROBOTS_PATH }}
