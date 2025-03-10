@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"><url><loc>https://migliorelli.dev/</loc><lastmod>2025-03-06T01:51:21.887Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="pt-BR" href="https://migliorelli.dev/"/><xhtml:link rel="alternate" hreflang="en" href="https://migliorelli.dev/en"/><xhtml:link rel="alternate" hreflang="x-default" href="https://migliorelli.dev/"/></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://migliorelli.dev/</loc>
+    <lastmod>2025-03-10T01:02:48.409Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://migliorelli.dev/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://migliorelli.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://migliorelli.dev/" />
+  </url>
+
+  <url>
+    <loc>https://migliorelli.dev/en/</loc>
+    <lastmod>2025-03-10T01:02:48.409Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://migliorelli.dev/en/" />
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://migliorelli.dev/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://migliorelli.dev/en/" />
+  </url>
+</urlset>
