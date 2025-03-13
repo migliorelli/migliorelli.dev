@@ -2,6 +2,8 @@ name: Deploy to VPS
 
 on:
   push:
+    paths-ignore:
+      - "*.md"
     branches:
       - deploy
 
