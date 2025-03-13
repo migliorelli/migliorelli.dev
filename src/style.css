@@ -68,7 +68,7 @@
   }
 
   .bg-dots {
-    @apply inset-0 h-full w-full bg-transparent bg-[radial-gradient(theme("colors.slate.900")_1px,transparent_1px)] [background-size:30px_30px];
+    @apply inset-0 h-full w-full bg-transparent bg-[radial-gradient(--alpha(theme("colors.neutral.800")/75%)_1px,transparent_1px)] [background-size:30px_30px];
   }
 
   .btn-circle {
