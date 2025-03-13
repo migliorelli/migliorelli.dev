@@ -1,22 +1,22 @@
 import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
-// import sitemap from "vite-plugin-sitemap";
+import sitemap from "vite-plugin-sitemap";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     tailwindcss(),
-    // sitemap({
-    //   hostname: "https://migliorelli.dev",
-    //   outDir: "dist",
-    //   i18n: {
-    //     defaultLanguage: "pt-BR",
-    //     strategy: "prefix",
-    //     languages: ["pt-BR", "en"],
-    //   },
-    // }),
+    sitemap({
+      hostname: "https://migliorelli.dev",
+      outDir: "dist",
+      i18n: {
+        defaultLanguage: "pt-BR",
+        strategy: "prefix",
+        languages: ["pt-BR", "en"],
+      },
+    }),
   ],
   server: {
     port: 3000,
