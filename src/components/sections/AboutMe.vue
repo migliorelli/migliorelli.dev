@@ -29,7 +29,7 @@ const techs = [
       </div>
 
       <div class="grid gap-8 md:grid-cols-3">
-        <div class="col-span-2 flex flex-col justify-center gap-8">
+        <div class="col-span-2 space-y-8">
           <p v-animate-on-view="{ delay: 100 }">
             {{ t("aboutme.description") }}
           </p>
@@ -40,8 +40,8 @@ const techs = [
           </ul>
         </div>
 
-        <div class="hidden justify-center md:flex" v-animate-on-view>
-          <div class="group size-80 overflow-hidden rounded-lg">
+        <div class="hidden md:block md:justify-self-end" v-animate-on-view>
+          <div class="group min-h-80 max-w-80 overflow-hidden rounded-lg">
             <img
               src="/migliorelli.png"
               class="w-full rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
