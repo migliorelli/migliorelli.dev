@@ -10,7 +10,7 @@ import Skills from "../components/sections/Skills.vue";
 
 <template>
   <Navbar />
-  <main class="bg-dots w-full">
+  <main class="bg-dots inset-0 h-full w-full">
     <Hero />
     <AboutMe />
     <Projects />
