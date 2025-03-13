@@ -47,7 +47,7 @@ const { t } = useI18n();
           :description="t('projects.lolrandom.description')"
           :techs="['Vue', 'Lucide', 'Axios', 'DataDragon API']"
           image="/projects/lolrandom.png"
-          href="https://lol-skin-randomizer.vercel.app/"
+          href="https://lolrandom.migliorelli.dev/"
           github="https://github.com/migliorelli/lol-skin-randomizer"
         />
 
