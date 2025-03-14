@@ -26,6 +26,7 @@ const techs = [
             alt="Migliorelli profile image"
             :width="48"
             :height="48"
+            loading="lazy"
           />
         </div>
 
@@ -54,6 +55,7 @@ const techs = [
               :height="320"
               alt="Migliorelli profile image"
               class="w-full rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
+              loading="lazy"
             />
           </div>
         </div>

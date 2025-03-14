@@ -28,6 +28,7 @@ const { t } = useI18n();
     >
       <div class="aspect-video overflow-hidden rounded-lg">
         <img
+          loading="lazy"
           :src="image"
           :width="imageWidth"
           :height="imageHeight"
