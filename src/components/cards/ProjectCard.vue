@@ -25,6 +25,7 @@ const { t } = useI18n();
         <img
           :src="image"
           class="mx-auto h-full rounded-lg object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+          :alt="`${title} image`"
         />
       </div>
       <div class="flex flex-1 flex-col gap-4">

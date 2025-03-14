@@ -20,7 +20,11 @@ const techs = [
     <div class="container mx-auto space-y-8 px-4">
       <div class="flex gap-4 text-5xl" v-animate-on-view>
         <div class="size-[1em] md:hidden">
-          <img src="/migliorelli.png" class="size-full rounded-lg" />
+          <img
+            src="/migliorelli.png"
+            class="size-full rounded-lg"
+            alt="Migliorelli profile image"
+          />
         </div>
 
         <h1 class="font-bold text-white">
@@ -44,6 +48,7 @@ const techs = [
           <div class="group min-h-80 max-w-80 overflow-hidden rounded-lg">
             <img
               src="/migliorelli.png"
+              alt="Migliorelli profile image"
               class="w-full rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
           </div>
