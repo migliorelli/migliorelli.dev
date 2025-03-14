@@ -34,9 +34,9 @@ const techs = [
             {{ t("aboutme.description") }}
           </p>
           <ul class="flex flex-wrap gap-4" v-animate-on-view="{ delay: 200 }">
-            <div v-for="tech in techs" class="chip">
+            <li v-for="tech in techs" class="chip">
               {{ tech }}
-            </div>
+            </li>
           </ul>
         </div>
 
