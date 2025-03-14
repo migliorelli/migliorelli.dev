@@ -20,7 +20,14 @@ const techs = [
     <div class="container mx-auto space-y-8 px-4">
       <div class="flex gap-4 text-5xl" v-animate-on-view>
         <div class="size-[1em] md:hidden">
-          <img src="/migliorelli.png" class="size-full rounded-lg" />
+          <img
+            src="/me/migliorelli.webp"
+            class="size-full rounded-lg"
+            alt="Migliorelli profile image"
+            :width="48"
+            :height="48"
+            loading="lazy"
+          />
         </div>
 
         <h1 class="font-bold text-white">
@@ -29,22 +36,26 @@ const techs = [
       </div>
 
       <div class="grid gap-8 md:grid-cols-3">
-        <div class="col-span-2 flex flex-col justify-center gap-8">
+        <div class="col-span-2 space-y-8">
           <p v-animate-on-view="{ delay: 100 }">
             {{ t("aboutme.description") }}
           </p>
           <ul class="flex flex-wrap gap-4" v-animate-on-view="{ delay: 200 }">
-            <div v-for="tech in techs" class="chip">
+            <li v-for="tech in techs" class="chip">
               {{ tech }}
-            </div>
+            </li>
           </ul>
         </div>
 
-        <div class="hidden justify-center md:flex" v-animate-on-view>
-          <div class="group size-80 overflow-hidden rounded-lg">
+        <div class="hidden md:block md:justify-self-end" v-animate-on-view>
+          <div class="group min-h-80 max-w-80 overflow-hidden rounded-lg">
             <img
-              src="/migliorelli.png"
+              src="/me/migliorelli.webp"
+              :width="320"
+              :height="320"
+              alt="Migliorelli profile image"
               class="w-full rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
+              loading="lazy"
             />
           </div>
         </div>

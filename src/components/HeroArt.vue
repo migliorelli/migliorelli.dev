@@ -5,7 +5,7 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 <template>
   <DotLottieVue
     class="h-full"
-    src="/laptop.lottie"
+    src="/lotties/laptop.lottie"
     autoplay
     loop
     :speed="0.5"

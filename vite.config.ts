@@ -31,6 +31,7 @@ export default defineConfig({
     assetsDir: "assets",
     emptyOutDir: true,
     sourcemap: false,
+    chunkSizeWarningLimit: 800,
     minify: "terser",
     terserOptions: {
       compress: {

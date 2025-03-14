@@ -23,7 +23,7 @@ const { t } = useI18n();
           :title="t('projects.wbpinturas.title')"
           :description="t('projects.wbpinturas.description')"
           :techs="['Vue', 'TailindCSS', 'Lucide']"
-          image="/projects/wbpinturas.png"
+          image="/projects/wbpinturas.webp"
           href="https://migliorelli.github.io/wbpinturas/"
         />
 
@@ -38,7 +38,7 @@ const { t } = useI18n();
             'Socket.io',
             'MongoDB',
           ]"
-          image="/projects/fartic.png"
+          image="/projects/fartic.webp"
           github="https://github.com/migliorelli/fartic"
         />
 
@@ -46,7 +46,7 @@ const { t } = useI18n();
           :title="t('projects.lolrandom.title')"
           :description="t('projects.lolrandom.description')"
           :techs="['Vue', 'Lucide', 'Axios', 'DataDragon API']"
-          image="/projects/lolrandom.png"
+          image="/projects/lolrandom.webp"
           href="https://lolrandom.migliorelli.dev/"
           github="https://github.com/migliorelli/lol-skin-randomizer"
         />
@@ -55,7 +55,7 @@ const { t } = useI18n();
           :title="t('projects.instaprobar.title')"
           :description="t('projects.instaprobar.description')"
           :techs="['Javascript', 'Browser Extension']"
-          image="/projects/instaprobar.png"
+          image="/projects/instaprobar.webp"
           github="https://github.com/migliorelli/instagram-video-progress-bar"
         />
 
@@ -63,7 +63,7 @@ const { t } = useI18n();
           :title="t('projects.tunein.title')"
           :description="t('projects.tunein.description')"
           :techs="['Javascript', 'Twitch Extension', 'StreamElements API']"
-          image="/projects/tunein.png"
+          image="/projects/tunein.webp"
           github="https://github.com/migliorelli/tune-in"
         />
       </div>
