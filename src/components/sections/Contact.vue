@@ -42,9 +42,9 @@ const contacts = [
               class="mb-4 text-4xl font-bold text-white"
               v-html="t('contact.title')"
             />
-            <p class="mb-8 text-xl text-slate-400">
+            <h2 class="mb-8 text-xl text-slate-400">
               {{ t("contact.description") }}
-            </p>
+            </h2>
 
             <div class="grid md:grid-cols-2">
               <a
