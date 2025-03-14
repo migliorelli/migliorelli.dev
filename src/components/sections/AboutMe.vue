@@ -21,7 +21,7 @@ const techs = [
       <div class="flex gap-4 text-5xl" v-animate-on-view>
         <div class="size-[1em] md:hidden">
           <img
-            src="/migliorelli.png"
+            src="/me/migliorelli.webp"
             class="size-full rounded-lg"
             alt="Migliorelli profile image"
             :width="48"
@@ -50,7 +50,7 @@ const techs = [
         <div class="hidden md:block md:justify-self-end" v-animate-on-view>
           <div class="group min-h-80 max-w-80 overflow-hidden rounded-lg">
             <img
-              src="/migliorelli.png"
+              src="/me/migliorelli.webp"
               :width="320"
               :height="320"
               alt="Migliorelli profile image"
