@@ -9,9 +9,14 @@ export interface Project {
   href?: string;
   github?: string;
   techs: string[];
+  imageWidth?: number;
+  imageHeight?: number;
 }
 
-defineProps<Project>();
+withDefaults(defineProps<Project>(), {
+  imageWidth: 800,
+  imageHeight: 450,
+});
 
 const { t } = useI18n();
 </script>
@@ -24,6 +29,8 @@ const { t } = useI18n();
       <div class="aspect-video overflow-hidden rounded-lg">
         <img
           :src="image"
+          :width="imageWidth"
+          :height="imageHeight"
           class="mx-auto h-full rounded-lg object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
           :alt="`${title} image`"
         />

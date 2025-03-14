@@ -24,6 +24,8 @@ const techs = [
             src="/migliorelli.png"
             class="size-full rounded-lg"
             alt="Migliorelli profile image"
+            :width="48"
+            :height="48"
           />
         </div>
 
@@ -48,6 +50,8 @@ const techs = [
           <div class="group min-h-80 max-w-80 overflow-hidden rounded-lg">
             <img
               src="/migliorelli.png"
+              :width="320"
+              :height="320"
               alt="Migliorelli profile image"
               class="w-full rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
