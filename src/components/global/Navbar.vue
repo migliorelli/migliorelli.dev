@@ -12,6 +12,13 @@ const basePath = computed(() => {
   return locale.value === "pt-BR" ? "/" : "/en";
 });
 
+const links = computed(() => [
+  { to: "#aboutme", text: t("navbar.aboutme") },
+  { to: "#projects", text: t("navbar.projects") },
+  { to: "#skills", text: t("navbar.skills") },
+  { to: "#contact", text: t("navbar.contact") },
+]);
+
 const locales = computed(() => [
   { key: "pt-BR", value: "🇧🇷 Português" },
   { key: "en", value: "🇬🇧 English" },
@@ -42,24 +49,9 @@ const changeLocale = (option: Option) => {
       </div>
 
       <ul class="hidden items-center justify-center gap-8 md:flex">
-        <li>
-          <RouterLink to="#aboutme" class="nav-link">
-            {{ t("navbar.aboutme") }}
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="#projects" class="nav-link">
-            {{ t("navbar.projects") }}
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="#skills" class="nav-link">
-            {{ t("navbar.skills") }}
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="#contact" class="nav-link">
-            {{ t("navbar.contact") }}
+        <li v-for="link in links" :key="link.to">
+          <RouterLink :to="link.to" class="nav-link">
+            {{ link.text }}
           </RouterLink>
         </li>
       </ul>
