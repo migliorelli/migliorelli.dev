@@ -60,6 +60,7 @@ const changeLocale = (option: Option) => {
         <Dropdown
           @change="changeLocale"
           :selected-key="locale"
+          container-class="my-auto"
           button-class="size-8 font-emoji"
           option-class="font-emoji"
           :options="locales"

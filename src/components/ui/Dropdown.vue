@@ -8,6 +8,7 @@ export interface Option {
 
 interface Props {
   options: Option[];
+  containerClass?: string;
   buttonClass?: string;
   optionClass?: string;
   selectedKey?: string;
@@ -46,7 +47,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative inline-block text-left" ref="dropdownRef">
+  <div
+    :class="`relative inline-block text-left ${containerClass}`"
+    ref="dropdownRef"
+  >
     <button
       type="button"
       :class="`flex cursor-pointer items-center justify-between rounded-lg p-2 text-white hover:bg-slate-200/20 ${buttonClass}`"
