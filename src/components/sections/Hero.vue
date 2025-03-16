@@ -68,14 +68,14 @@ onMounted(() => {
 
         <div class="space-y-2">
           <h2
-            class="pr-2 font-mono text-2xl break-words"
+            class="pr-2 font-mono text-xl md:text-2xl break-words"
             v-animate-on-view="{ delay: 200 }"
           >
             {{ t("hero.im") }}
             <span class="text-primary">{{ currentRole }}</span>
             <span class="animate-pulse">|</span>
           </h2>
-          <p class="text-lg text-gray-300" v-animate-on-view="{ delay: 300 }">
+          <p class="md:text-lg text-gray-300" v-animate-on-view="{ delay: 300 }">
             {{ t("hero.description") }}
           </p>
         </div>
