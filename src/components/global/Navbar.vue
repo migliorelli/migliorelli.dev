@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { Menu } from "lucide-vue-next";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import Dropdown, { type Option } from "../ui/Dropdown.vue";
+import NavDrawer from "./NavDrawer.vue";
 
 const router = useRouter();
 const route = useRoute();
@@ -23,6 +25,8 @@ const locales = computed(() => [
   { key: "pt-BR", value: "🇧🇷 Português" },
   { key: "en", value: "🇬🇧 English" },
 ]);
+
+const drawerIsOpen = ref(false);
 
 const changeLocale = (option: Option) => {
   locale.value = option.key;
@@ -56,7 +60,7 @@ const changeLocale = (option: Option) => {
         </li>
       </ul>
 
-      <div class="my-auto">
+      <div class="my-auto flex items-center gap-4">
         <Dropdown
           @change="changeLocale"
           :selected-key="locale"
@@ -67,7 +71,16 @@ const changeLocale = (option: Option) => {
         >
           {{ locale === "pt-BR" ? "🇧🇷" : "🇬🇧" }}
         </Dropdown>
+
+        <button
+          class="mds:hidden inline-block p-2"
+          @click="drawerIsOpen = true"
+        >
+          <Menu :size="24" />
+        </button>
       </div>
     </nav>
   </header>
+
+  <NavDrawer :open="drawerIsOpen" @close="drawerIsOpen = false" />
 </template>
