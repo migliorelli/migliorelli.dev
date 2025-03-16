@@ -73,7 +73,7 @@ const changeLocale = (option: Option) => {
         </Dropdown>
 
         <button
-          class="mds:hidden inline-block p-2"
+          class="md:hidden inline-block p-2"
           @click="drawerIsOpen = true"
         >
           <Menu :size="24" />
