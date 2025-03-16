@@ -71,7 +71,7 @@ onMounted(() => {
 
         <div class="space-y-2">
           <h2
-            class="pr-2 font-mono text-xl break-words md:text-2xl"
+            class="h-[2lh] pr-2 font-mono text-xl break-words md:text-2xl"
             v-animate-on-view="{ delay: 200 }"
           >
             {{ t("hero.im") }}
