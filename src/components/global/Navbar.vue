@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { Menu } from "lucide-vue-next";
+import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
 import Dropdown, { type Option } from "../ui/Dropdown.vue";
+import NavDrawer from "./NavDrawer.vue";
 
 const router = useRouter();
 const route = useRoute();
@@ -12,10 +14,19 @@ const basePath = computed(() => {
   return locale.value === "pt-BR" ? "/" : "/en";
 });
 
+const links = computed(() => [
+  { to: "#aboutme", text: t("navbar.aboutme") },
+  { to: "#projects", text: t("navbar.projects") },
+  { to: "#skills", text: t("navbar.skills") },
+  { to: "#contact", text: t("navbar.contact") },
+]);
+
 const locales = computed(() => [
   { key: "pt-BR", value: "🇧🇷 Português" },
   { key: "en", value: "🇬🇧 English" },
 ]);
+
+const drawerIsOpen = ref(false);
 
 const changeLocale = (option: Option) => {
   locale.value = option.key;
@@ -42,39 +53,34 @@ const changeLocale = (option: Option) => {
       </div>
 
       <ul class="hidden items-center justify-center gap-8 md:flex">
-        <li>
-          <RouterLink to="#aboutme" class="nav-link">
-            {{ t("navbar.aboutme") }}
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="#projects" class="nav-link">
-            {{ t("navbar.projects") }}
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="#skills" class="nav-link">
-            {{ t("navbar.skills") }}
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink to="#contact" class="nav-link">
-            {{ t("navbar.contact") }}
+        <li v-for="link in links" :key="link.to">
+          <RouterLink :to="link.to" class="nav-link">
+            {{ link.text }}
           </RouterLink>
         </li>
       </ul>
 
-      <div class="my-auto">
+      <div class="my-auto flex items-center gap-4">
         <Dropdown
           @change="changeLocale"
           :selected-key="locale"
+          container-class="my-auto"
           button-class="size-8 font-emoji"
           option-class="font-emoji"
           :options="locales"
         >
           {{ locale === "pt-BR" ? "🇧🇷" : "🇬🇧" }}
         </Dropdown>
+
+        <button
+          class="md:hidden inline-block p-2"
+          @click="drawerIsOpen = true"
+        >
+          <Menu :size="24" />
+        </button>
       </div>
     </nav>
   </header>
+
+  <NavDrawer :open="drawerIsOpen" @close="drawerIsOpen = false" />
 </template>

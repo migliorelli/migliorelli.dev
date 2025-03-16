@@ -3,6 +3,7 @@ import { Download, Share2 } from "lucide-vue-next";
 import { computed, onMounted, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import HeroArt from "../HeroArt.vue";
+import ScrollAdvise from "../ScrollAdvise.vue";
 
 const { t, locale } = useI18n();
 
@@ -52,7 +53,9 @@ onMounted(() => {
 
 <template>
   <section id="hero" class="h-dvh pt-18">
-    <div class="container mx-auto grid h-full w-full px-4 md:grid-cols-2">
+    <div
+      class="relative container mx-auto grid h-full w-full px-4 md:grid-cols-2"
+    >
       <div class="flex h-full max-w-xl flex-col justify-center pb-18">
         <div class="mb-8 space-y-4">
           <p class="text-primary" v-animate-on-view>
@@ -68,14 +71,17 @@ onMounted(() => {
 
         <div class="space-y-2">
           <h2
-            class="pr-2 font-mono text-2xl break-words"
+            class="h-[2lh] pr-2 font-mono text-xl break-words md:text-2xl"
             v-animate-on-view="{ delay: 200 }"
           >
             {{ t("hero.im") }}
             <span class="text-primary">{{ currentRole }}</span>
             <span class="animate-pulse">|</span>
           </h2>
-          <p class="text-lg text-gray-300" v-animate-on-view="{ delay: 300 }">
+          <p
+            class="text-gray-300 md:text-lg"
+            v-animate-on-view="{ delay: 300 }"
+          >
             {{ t("hero.description") }}
           </p>
         </div>
@@ -100,6 +106,7 @@ onMounted(() => {
       <div class="hidden md:grid md:place-items-center" v-animate-on-view>
         <HeroArt />
       </div>
+      <ScrollAdvise />
     </div>
   </section>
 </template>
