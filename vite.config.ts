@@ -16,28 +16,36 @@ export default defineConfig({
         strategy: "prefix",
         languages: ["pt-BR", "en"],
       },
+      exclude: ["/404"],
+      robots: [
+        {
+          userAgent: "*",
+          allow: "/",
+        },
+      ],
     }),
   ],
   server: {
-    port: 3000,
-    strictPort: true,
-    host: true,
-    watch: {
-      usePolling: true,
-    },
+    port: (process.env.PORT as unknown as number) || 3000,
+    // port: 3000,
+    // strictPort: true,
+    // host: true,
+    // watch: {
+    //   usePolling: true,
+    // },
   },
-  build: {
-    outDir: "dist",
-    assetsDir: "assets",
-    emptyOutDir: true,
-    sourcemap: false,
-    chunkSizeWarningLimit: 800,
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
-  },
+  // build: {
+  //   outDir: "dist",
+  //   assetsDir: "assets",
+  //   emptyOutDir: true,
+  //   sourcemap: false,
+  //   chunkSizeWarningLimit: 800,
+  //   minify: "terser",
+  //   terserOptions: {
+  //     compress: {
+  //       drop_console: true,
+  //       drop_debugger: true,
+  //     },
+  //   },
+  // },
 });
