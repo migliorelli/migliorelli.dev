@@ -16,13 +16,6 @@ export default defineConfig({
         strategy: "prefix",
         languages: ["pt-BR", "en"],
       },
-      exclude: ["/404"],
-      robots: [
-        {
-          userAgent: "*",
-          allow: "/",
-        },
-      ],
     }),
   ],
   server: {
