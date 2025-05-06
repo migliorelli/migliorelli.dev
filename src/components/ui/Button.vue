@@ -1,13 +1,11 @@
 <template>
   <component
     :is="as"
-    v-bind="props"
     :class="
       twMerge(
         'bg-primary hover:bg-primary/80 text-primary-100 inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
         variant === 'border' &&
           'hover:bg-primary/20 border-primary text-primary border bg-transparent',
-        $attrs.class as string,
       )
     "
   >
@@ -24,7 +22,7 @@ interface Props {
   as?: string | Component;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   variant: "default",
   as: "button",
 });

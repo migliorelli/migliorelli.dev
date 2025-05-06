@@ -1,19 +1,10 @@
 <template>
-  <div
-    :class="
-      twMerge(
-        'relative inline-block text-left select-none',
-        $attrs.class as string,
-      )
-    "
-    ref="dropdownRef"
-  >
+  <div class="relative inline-block text-left select-none" ref="dropdownRef">
     <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { twMerge } from "tailwind-merge";
 import { onMounted, onUnmounted, provide, ref, useTemplateRef } from "vue";
 
 export interface DropdownOption {

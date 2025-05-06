@@ -4,19 +4,13 @@
     @click.stop="open = !open"
     aria-haspopup="true"
     :aria-expanded="open"
-    :class="
-      twMerge(
-        'hover:bg-card flex cursor-pointer items-center justify-between rounded-lg p-2 text-foreground',
-        $attrs.class as string,
-      )
-    "
+    class="hover:bg-card text-foreground flex cursor-pointer items-center justify-between rounded-lg p-2"
   >
     <slot />
   </component>
 </template>
 
 <script setup lang="ts">
-import { twMerge } from "tailwind-merge";
 import { inject, ref, type Component, type Ref } from "vue";
 
 interface Props {

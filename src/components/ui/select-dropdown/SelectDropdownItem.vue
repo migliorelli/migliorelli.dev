@@ -3,19 +3,13 @@
     :is="as"
     role="menuitem"
     @click="handleClick(value)"
-    :class="
-      twMerge(
-        'group flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-white transition-colors duration-150 hover:bg-muted',
-        $attrs.class as string,
-      )
-    "
+    class="group hover:bg-muted flex w-full cursor-pointer items-center px-4 py-2 text-left text-sm text-white transition-colors duration-150"
   >
     <slot />
   </component>
 </template>
 
 <script setup lang="ts">
-import { twMerge } from "tailwind-merge";
 import { inject, type Component } from "vue";
 
 interface Props {
@@ -26,5 +20,8 @@ interface Props {
 withDefaults(defineProps<Props>(), { as: "button" });
 
 type HandleClick = (value: string) => void;
-const handleClick = inject<HandleClick>("handle-select-dropdown-item-click", () => {});
+const handleClick = inject<HandleClick>(
+  "handle-select-dropdown-item-click",
+  () => {},
+);
 </script>
