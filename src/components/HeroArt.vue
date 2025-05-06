@@ -8,7 +8,7 @@ import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
     src="/lotties/laptop.lottie"
     autoplay
     loop
-    :speed="0.5"
+    :speed="0.75"
     useFrameInterpolation
   />
 </template>

@@ -1,25 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { i18n } from "../lib/i18n";
-import IndexView from "../views/IndexView.vue";
-import NotFoundView from "../views/NotFoundView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: "/:pathMatch(.*)*",
-      component: NotFoundView,
+      component: () => import("../views/NotFoundView.vue"),
       name: "NotFound",
     },
     {
       path: "/",
-      component: IndexView,
+      component: () => import("../views/IndexView.vue"),
       name: "Index-BR",
       meta: { locale: "pt-BR" },
     },
     {
       path: "/en",
-      component: IndexView,
+      component: () => import("../views/IndexView.vue"),
       name: "Index-EN",
       meta: { locale: "en" },
     },

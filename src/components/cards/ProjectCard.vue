@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ArrowUpRight, Github } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
+import Badge from "../ui/Badge.vue";
+import Button from "../ui/Button.vue";
 
 export interface Project {
   title: string;
@@ -13,18 +15,17 @@ export interface Project {
   imageHeight?: number;
 }
 
-withDefaults(defineProps<Project>(), {
-  imageWidth: 800,
-  imageHeight: 450,
-});
+defineProps<Project>();
 
+const imageWidth = 800;
+const imageHeight = 450;
 const { t } = useI18n();
 </script>
 
 <template>
   <div v-animate-on-view class="flex">
     <div
-      class="group border-primary-950/70 hover:shadow-primary flex flex-col gap-2 rounded-lg border bg-black p-4 transition-shadow"
+      class="group border-primary/20 hover:border-primary/50 hover:shadow-primary bg-background flex flex-col gap-2 rounded-lg border p-4 transition-all"
     >
       <div class="aspect-video overflow-hidden rounded-lg">
         <img
@@ -36,29 +37,35 @@ const { t } = useI18n();
           :alt="`${title} image`"
         />
       </div>
-      <div class="flex flex-1 flex-col gap-4">
-        <p class="text-xl text-white">{{ title }}</p>
+      <div class="flex flex-1 flex-col gap-4 mt-2">
+        <p class="text-primary-400 text-2xl font-medium">{{ title }}</p>
+        <p>{{ description }}</p>
 
-        <p class="text-slate-400">{{ description }}</p>
-
-        <div class="flex flex-wrap gap-4">
-          <div v-for="tech in techs" :key="tech" class="chip px-2 py-1">
+        <div class="flex flex-wrap gap-2">
+          <Badge as="li" v-for="tech in techs" :key="tech">
             {{ tech }}
-          </div>
+          </Badge>
         </div>
 
         <div class="mt-auto flex gap-4">
-          <a :href="href" v-if="href" target="_blank" class="btn btn-border">
-            <ArrowUpRight :size="18" /> {{ t("projects.access") }}
-          </a>
-          <a
-            :href="github"
-            v-if="github"
+          <Button
+            v-if="href"
+            as="a"
+            :href="href"
             target="_blank"
-            class="btn btn-border"
+            variant="border"
+          >
+            <ArrowUpRight :size="18" /> {{ t("projects.access") }}
+          </Button>
+          <Button
+            v-if="github"
+            as="a"
+            :href="github"
+            target="_blank"
+            variant="border"
           >
             <Github :size="18" /> Github
-          </a>
+          </Button>
         </div>
       </div>
     </div>

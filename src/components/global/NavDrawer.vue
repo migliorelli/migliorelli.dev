@@ -22,6 +22,7 @@ const links = computed(() => [
   { to: "#aboutme", text: t("navbar.aboutme") },
   { to: "#projects", text: t("navbar.projects") },
   { to: "#skills", text: t("navbar.skills") },
+  // { to: "#services", text: t("navbar.services") },
   { to: "#contact", text: t("navbar.contact") },
 ]);
 

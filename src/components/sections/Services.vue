@@ -1,8 +1,9 @@
+<!--
 <template>
   <section id="projects" class="py-18">
     <div class="container mx-auto px-4">
       <Title class="mb-8" v-animate-on-view>
-        {{ t("projects.title") }}
+        {{ t("services.title") }}
       </Title>
 
       <div class="grid gap-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -29,3 +30,4 @@ import Title from "../ui/Title.vue";
 
 const { t } = useI18n();
 </script>
+-->

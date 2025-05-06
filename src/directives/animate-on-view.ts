@@ -1,12 +1,18 @@
 import { type Directive } from "vue";
 
+declare global {
+  interface HTMLElement {
+    _animateObserver?: IntersectionObserver;
+  }
+}
+
 export interface AnimateOnViewOptions {
-  threshold?: number;
-  enter?: string;
-  exit?: string;
-  once?: boolean;
-  delay?: number;
-  duration?: number;
+  threshold: number;
+  enter: string;
+  exit: string;
+  once: boolean;
+  delay: number;
+  duration: number;
 }
 
 const animateOnView: Directive<
@@ -25,11 +31,11 @@ const animateOnView: Directive<
         binding.value?.exit ??
         "transition-[transform, opacity] translate-y-12 opacity-0",
       once: binding.value?.once !== false,
-      delay: binding.value?.delay || 0,
-      duration: binding.value?.duration || 1000,
+      delay: binding.value?.delay ?? 0,
+      duration: binding.value?.duration ?? 1000,
     };
 
-    el.classList.add(...(options.exit?.split(" ") || []));
+    el.classList.add(...(options.exit.split(" ") || []));
 
     const observer = new IntersectionObserver(
       (entries: IntersectionObserverEntry[]) => {
@@ -37,17 +43,15 @@ const animateOnView: Directive<
           if (entry.isIntersecting) {
             el.style.transitionDelay = `${options.delay}ms`;
             el.style.transitionDuration = `${options.duration}ms`;
-            options.exit?.split(" ").forEach((cls) => el.classList.remove(cls));
-            options.enter?.split(" ").forEach((cls) => el.classList.add(cls));
+            options.exit.split(" ").forEach((cls) => el.classList.remove(cls));
+            options.enter.split(" ").forEach((cls) => el.classList.add(cls));
 
             if (options.once) {
               observer.disconnect();
             }
           } else if (!options.once) {
-            options.enter
-              ?.split(" ")
-              .forEach((cls) => el.classList.remove(cls));
-            options.exit?.split(" ").forEach((cls) => el.classList.add(cls));
+            options.enter.split(" ").forEach((cls) => el.classList.remove(cls));
+            options.exit.split(" ").forEach((cls) => el.classList.add(cls));
           }
         });
       },
@@ -70,9 +74,3 @@ const animateOnView: Directive<
 };
 
 export default animateOnView;
-
-declare global {
-  interface HTMLElement {
-    _animateObserver?: IntersectionObserver;
-  }
-}

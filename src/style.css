@@ -8,11 +8,19 @@
 
 @theme {
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+  --font-segoe: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   --font-emoji:
     "NotoColorEmojiLimited", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
+
+  --color-background: oklch(14.077% 0.00439 285.82);
+  --color-background-alt: oklch(18.356% 0.00607 285.79);
+  --color-foreground: oklch(71.181% 0.01294 286.07);
+
+  --color-card: oklch(26.698% 0.01107 285.63);
+  --color-muted: oklch(34.424% 0.01559 285.55);
 
   --color-primary: oklch(60.56% 0.2189 292.72);
   --color-primary-50: oklch(96.37% 0.0187 292.61);
@@ -30,7 +38,7 @@
 
 @layer base {
   * {
-    @apply selection:bg-primary/50 selection:text-primary-200;
+    @apply selection:bg-primary-300/50 selection:text-primary-200;
   }
 
   html {
@@ -38,7 +46,7 @@
   }
 
   body {
-    @apply font-jetbrains-mono m-0 min-h-dvh bg-black text-slate-300 antialiased;
+    @apply font-segoe text-foreground bg-background m-0 min-h-dvh overflow-x-hidden antialiased;
   }
 
   #app {
@@ -46,40 +54,18 @@
   }
 }
 
-@utility bg-dots {
+/* @utility bg-dots {
   background: radial-gradient(
     --alpha(theme("colors.neutral.800") / 75%) 1px,
     transparent 1px
   );
   background-size: 30px 30px;
-}
+} */
 
 @utility shadow-primary {
   box-shadow: 0px 10px 50px 0px --alpha(theme("colors.primary.700") / 25%);
 }
 
-@layer components {
-  .btn {
-    @apply bg-primary hover:bg-primary/80 inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
-  }
-
-  .btn-border {
-    @apply hover:bg-primary/20 border-primary text-primary border-1 bg-transparent;
-  }
-
-  .nav-link {
-    @apply hover:text-primary before:bg-primary relative text-sm transition-all duration-200 ease-in-out before:absolute before:-bottom-[4px] before:left-0 before:h-[2px] before:w-full before:max-w-0 before:transition-all before:duration-200 before:ease-in-out hover:before:max-w-full;
-  }
-
-  .chip {
-    @apply bg-primary/20 text-primary inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold [&_svg]:size-4 [&_svg]:shrink-0;
-  }
-
-  .input {
-    @apply focus:ring-primary/20 focus:border-primary w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:outline-none;
-  }
-
-  .btn-circle {
-    @apply aspect-square rounded-full bg-purple-500/2 p-1;
-  }
+@utility text-gradient {
+  @apply from-primary-400 to-primary-600 bg-gradient-to-r bg-clip-text text-transparent;
 }

@@ -45,7 +45,9 @@ const socialLinks = [
           <h3 class="text-md font-bold text-white">
             {{ t("footer.links") }}
           </h3>
-          <ul class="space-y-2 text-sm">
+          <ul
+            class="grid grid-flow-col grid-cols-2 grid-rows-3 space-y-2 text-sm"
+          >
             <li>
               <RouterLink
                 to="#hero"
@@ -64,18 +66,28 @@ const socialLinks = [
             </li>
             <li>
               <RouterLink
-                to="#projects"
-                class="hover:text-primary text-gray-300 transition-colors"
-              >
-                {{ t("footer.projects") }}
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink
                 to="#skills"
                 class="hover:text-primary text-gray-300 transition-colors"
               >
                 {{ t("footer.skills") }}
+              </RouterLink>
+            </li>
+            <!--
+            <li>
+              <RouterLink
+                to="#services"
+                class="hover:text-primary text-gray-300 transition-colors"
+              >
+                {{ t("footer.services") }}
+              </RouterLink>
+            </li>
+            -->
+            <li>
+              <RouterLink
+                to="#projects"
+                class="hover:text-primary text-gray-300 transition-colors"
+              >
+                {{ t("footer.projects") }}
               </RouterLink>
             </li>
           </ul>
