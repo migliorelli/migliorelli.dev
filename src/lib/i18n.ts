@@ -12,7 +12,7 @@ const messages = {
 
     hero: {
       presentation: "Olá, me chamo",
-      subtitle: "Eu soluciono problemas",
+      subtitle: "Eu cronstruo soluções",
       description:
         "Desenvolvedor web fullstack especializado em React, Vue, Express.js e PostgreSQL. Crio aplicações modernas, escaláveis e com foco na experiência do usuário.",
       resume: "Baixar currículo",
