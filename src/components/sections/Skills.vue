@@ -1,7 +1,7 @@
 <template>
   <section id="skills" class="overflow-hidden py-12">
     <div
-      class="after:to-background-alt/50 after:from-background-alt relative py-18 after:absolute after:top-0 after:left-1/2 after:z-0 after:h-full after:w-[120%] after:-translate-x-1/2 after:-skew-3 after:bg-gradient-to-l md:py-32"
+      class="after:to-background-alt/50 after:from-background-alt relative py-18 after:absolute after:top-0 after:left-1/2 after:z-0 after:h-full after:w-[140%] after:-translate-x-1/2 after:-skew-3 after:bg-gradient-to-l md:py-32"
     >
       <div class="relative z-2 container mx-auto px-4">
         <Title class="mb-8" v-animate-on-view>
