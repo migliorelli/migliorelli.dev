@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed top-0 left-0 z-50 h-18 w-full bg-background/60 backdrop-blur-xs"
+    class="bg-background/60 fixed top-0 left-0 z-50 h-18 w-full backdrop-blur-xs"
   >
     <nav
       class="container mx-auto flex h-full w-full gap-8 p-4 px-4 md:content-center"
@@ -16,6 +16,18 @@
         <li v-for="link in links" :key="link.to">
           <NavLink :to="link.to">
             {{ link.text }}
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="https://blog.migliorelli.dev"
+            class="group flex items-center gap-1"
+          >
+            {{ t("navbar.blog") }}
+            <ArrowUpRight
+              :size="14"
+              class="group-[:not(:hover)]:text-foreground/50 mt-1"
+            />
           </NavLink>
         </li>
       </ul>
@@ -42,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { Menu } from "lucide-vue-next";
+import { ArrowUpRight, Menu } from "lucide-vue-next";
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";

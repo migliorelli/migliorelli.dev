@@ -8,6 +8,7 @@ const messages = {
       services: "Serviços",
       projects: "Projetos",
       contact: "Contato",
+      blog: "Blog",
     },
 
     hero: {
@@ -109,6 +110,7 @@ const messages = {
       services: "Services",
       projects: "Projects",
       contact: "Contact",
+      blog: "Blog",
     },
 
     hero: {
