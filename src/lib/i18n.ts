@@ -54,6 +54,11 @@ const messages = {
       title: "Projetos",
       access: "Acessar",
       items: {
+        trunker: {
+          title: "Trunker",
+          description:
+            "Um middleware Express.js leve para ajudar você a implementar feature flags. Gerencie e restrinja facilmente o acesso a rotas com base em feature flags estáticas ou dinâmicas, suportando validações síncronas e assíncronas.",
+        },
         wbpinturas: {
           title: "WB Pinturas",
           description: "Site para divulgar os serviços de pintura do meu pai.",
@@ -63,19 +68,14 @@ const messages = {
           description:
             "Jogo estilo Gartic, onde você desenha e os outros adivinham.",
         },
+        brotmon: {
+          title: "Brotmon",
+          description:
+            "Um jogo de batalha baseado em turnos em tempo real inspirado no sistema de combate do Pokémon, com personagens Brainrot.",
+        },
         lolrandom: {
           title: "LoL Skin Randomizer",
           description: "Sorteador de campeão e skin para League of Legends.",
-        },
-        instaprobar: {
-          title: "Instagram Progress Bar",
-          description:
-            "Extensão que adiciona barra de progresso nos vídeos do Instagram.",
-        },
-        tunein: {
-          title: "Tune In",
-          description:
-            "Extensão da Twitch que mostra a fila do StreamElements.",
         },
       },
     },
@@ -160,6 +160,11 @@ const messages = {
       title: "Projects",
       access: "Access",
       items: {
+        trunker: {
+          title: "Trunker",
+          description:
+            "A lightweight Express.js middleware to help you implement feature flags. Easily manage and restrict access to routes based on static or dynamic feature flags, supporting both synchronous and asynchronous validations.",
+        },
         wbpinturas: {
           title: "WB Pinturas",
           description: "Website to showcase my father's painting services.",
@@ -169,19 +174,14 @@ const messages = {
           description:
             "Gartic-like drawing game where players guess what's being drawn.",
         },
+        brotmon: {
+          title: "Brotmon",
+          description:
+            "A realtime turn-based battle game inspired by Pokémon's combat system, featuring Brainrot characters. ",
+        },
         lolrandom: {
           title: "LoL Skin Randomizer",
           description: "Tool to randomly choose a LoL champion and skin.",
-        },
-        instaprobar: {
-          title: "Instagram Progress Bar",
-          description:
-            "Extension that adds a progress bar to Instagram videos.",
-        },
-        tunein: {
-          title: "Tune In",
-          description:
-            "Twitch extension showing the StreamElements media queue.",
         },
       },
     },
