@@ -78,6 +78,10 @@ const messages = {
           title: "LoL Skin Randomizer",
           description: "Sorteador de campeão e skin para League of Legends.",
         },
+        blogliorelli: {
+          title: "Vitepress Blogliorelli",
+          description: "Tema de blog totalmente customizável para o Vitepress.",
+        },
       },
     },
 
@@ -184,6 +188,10 @@ const messages = {
         lolrandom: {
           title: "LoL Skin Randomizer",
           description: "Tool to randomly choose a LoL champion and skin.",
+        },
+        blogliorelli: {
+          title: "Vitepress Blogliorelli",
+          description: " Vitepress fully customizable blog theme.",
         },
       },
     },
