@@ -27,7 +27,7 @@
               v-animate-on-view
             >
               <li v-for="tech in section.stack" :key="tech.icon">
-                <TechIcon :icon="tech.icon" :label="tech.label" />
+                <TechIcon :icon="tech.icon" :title="tech.title" />
               </li>
             </ul>
           </li>
@@ -46,38 +46,38 @@ const { t } = useI18n();
 
 const stacks = {
   core: [
-    { icon: "devicon-react-original colored", label: "React" },
-    { icon: "devicon-vuejs-plain colored", label: "Vue.js" },
-    { icon: "devicon-nextjs-plain", label: "Next.js" },
-    { icon: "devicon-nodejs-plain-wordmark colored", label: "Node.js" },
-    { icon: "devicon-typescript-plain colored", label: "TypeScript" },
-    { icon: "devicon-express-original", label: "Express" },
+    { icon: "devicon-react-original colored", title: "React" },
+    { icon: "devicon-vuejs-plain colored", title: "Vue.js" },
+    { icon: "devicon-nextjs-plain", title: "Next.js" },
+    { icon: "devicon-nodejs-plain-wordmark colored", title: "Node.js" },
+    { icon: "devicon-typescript-plain colored", title: "TypeScript" },
+    { icon: "devicon-express-original", title: "Express" },
   ],
   database: [
-    { icon: "devicon-postgresql-plain colored", label: "PostgreSQL" },
-    { icon: "devicon-mariadb-original colored", label: "MariaDB" },
-    { icon: "devicon-redis-plain colored", label: "Redis" },
-    { icon: "devicon-mongodb-plain-wordmark colored", label: "MongoDB" },
-    { icon: "devicon-prisma-original", label: "Prisma" },
-    { icon: "devicon-supabase-plain colored", label: "Supabase" },
+    { icon: "devicon-postgresql-plain colored", title: "PostgreSQL" },
+    { icon: "devicon-mariadb-original colored", title: "MariaDB" },
+    { icon: "devicon-redis-plain colored", title: "Redis" },
+    { icon: "devicon-mongodb-plain-wordmark colored", title: "MongoDB" },
+    { icon: "devicon-prisma-original", title: "Prisma" },
+    { icon: "devicon-supabase-plain colored", title: "Supabase" },
   ],
   tools: [
-    { icon: "devicon-git-plain colored", label: "Git" },
-    { icon: "devicon-github-original", label: "GitHub" },
-    { icon: "devicon-docker-plain colored", label: "Docker" },
-    { icon: "devicon-nginx-original colored", label: "Nginx" },
-    { icon: "devicon-insomnia-plain colored", label: "Insomnia" },
-    { icon: "devicon-figma-plain colored", label: "Figma" },
-    { icon: "devicon-vercel-original", label: "Vercel" },
+    { icon: "devicon-git-plain colored", title: "Git" },
+    { icon: "devicon-github-original", title: "GitHub" },
+    { icon: "devicon-docker-plain colored", title: "Docker" },
+    { icon: "devicon-nginx-original colored", title: "Nginx" },
+    { icon: "devicon-insomnia-plain colored", title: "Insomnia" },
+    { icon: "devicon-figma-plain colored", title: "Figma" },
+    { icon: "devicon-vercel-original", title: "Vercel" },
   ],
   outro: [
-    { icon: "devicon-androidstudio-plain colored", label: "Android Studio" },
-    { icon: "devicon-kotlin-plain colored", label: "Kotlin" },
-    { icon: "devicon-java-plain colored", label: "Java" },
-    { icon: "devicon-csharp-plain colored", label: "C#" },
-    { icon: "devicon-lua-plain colored", label: "Lua" },
-    { icon: "devicon-php-plain colored", label: "PHP" },
-    { icon: "devicon-laravel-original colored", label: "Laravel" },
+    { icon: "devicon-androidstudio-plain colored", title: "Android Studio" },
+    { icon: "devicon-kotlin-plain colored", title: "Kotlin" },
+    { icon: "devicon-java-plain colored", title: "Java" },
+    { icon: "devicon-csharp-plain colored", title: "C#" },
+    { icon: "devicon-lua-plain colored", title: "Lua" },
+    { icon: "devicon-php-plain colored", title: "PHP" },
+    { icon: "devicon-laravel-original colored", title: "Laravel" },
   ],
 };
 

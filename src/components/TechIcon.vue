@@ -1,7 +1,7 @@
 <template>
   <div
     :key="icon"
-    :title="label"
+    :title="title"
     :style="{ '--icon-color': iconColor }"
     class="relative aspect-square overflow-hidden rounded-lg border border-[color-mix(in_oklab,_var(--icon-color)_25%,_transparent)] p-4 transition-all before:absolute before:top-0 before:left-0 before:h-full before:w-full before:shadow-[0_0_16px_0_color-mix(in_oklab,_var(--icon-color)_25%,_transparent)_inset] hover:border-[color-mix(in_oklab,_var(--icon-color)_35%,_transparent)] hover:shadow-[0_10px_50px_0_color-mix(in_oklab,_var(--icon-color)_25%,_transparent)]"
   >
@@ -14,7 +14,7 @@ import { onMounted, ref, useTemplateRef } from "vue";
 
 interface Props {
   icon: string;
-  label: string;
+  title: string;
 }
 
 defineProps<Props>();
