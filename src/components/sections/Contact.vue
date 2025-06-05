@@ -11,30 +11,20 @@
                 class="mb-4 text-4xl font-bold text-white"
                 v-html="t('contact.title')"
               />
+
               <h2 class="mb-8 text-xl text-slate-400">
                 {{ t("contact.description") }}
               </h2>
 
               <div class="grid gap-4 md:grid-cols-2">
-                <a
+                <ContactLink
                   v-for="(contact, index) in contacts"
                   :key="index"
+                  :content="contact.content"
+                  :icon="contact.icon"
                   :href="contact.href"
-                  class="hover:bg-primary/20 flex items-center gap-4 rounded-lg p-2"
-                  target="_blank"
-                >
-                  <div
-                    class="bg-primary-400/10 text-primary-400 grid size-12 place-items-center rounded-lg transition-colors"
-                  >
-                    <component :is="contact.icon" />
-                  </div>
-                  <div>
-                    <h3 class="font-semibold">{{ contact.title }}</h3>
-                    <p class="text-slate-500 select-text">
-                      {{ contact.content }}
-                    </p>
-                  </div>
-                </a>
+                  :title="contact.title"
+                />
               </div>
             </div>
           </div>
@@ -47,6 +37,7 @@
 <script setup lang="ts">
 import { Github, Linkedin, Mail, Phone } from "lucide-vue-next";
 import { useI18n } from "vue-i18n";
+import ContactLink from "../ui/ContactLink.vue";
 
 const { t } = useI18n();
 
