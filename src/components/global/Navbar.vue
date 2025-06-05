@@ -32,9 +32,21 @@
         </li>
       </ul>
 
-      <div class="my-auto flex items-center gap-4">
+      <div class="my-auto flex items-center gap-2">
+        <a
+          href="https://github.com/migliorelli"
+          target="_blank"
+          title="Github"
+          class="hover:bg-card text-foreground flex cursor-pointer items-center justify-between rounded-lg p-2"
+        >
+          <GithubIcon :size="18" />
+        </a>
+
         <SelectDropdown @change="changeLocale" class="font-emoji my-auto">
-          <SelectDropdownTrigger class="size-8 justify-center">
+          <SelectDropdownTrigger
+            class="size-8 justify-center"
+            title="Change locale"
+          >
             {{ locale === "pt-BR" ? "🇧🇷" : "🇬🇧" }}
           </SelectDropdownTrigger>
           <SelectDropdownItems>
@@ -54,7 +66,7 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowUpRight, Menu } from "lucide-vue-next";
+import { ArrowUpRight, GithubIcon, Menu } from "lucide-vue-next";
 import { computed, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute, useRouter } from "vue-router";
