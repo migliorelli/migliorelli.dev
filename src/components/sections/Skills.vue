@@ -64,6 +64,7 @@ const stacks = {
   tools: [
     { icon: "devicon-git-plain colored", label: "Git" },
     { icon: "devicon-github-original", label: "GitHub" },
+    { icon: "devicon-docker-plain colored", label: "Docker" },
     { icon: "devicon-nginx-original colored", label: "Nginx" },
     { icon: "devicon-insomnia-plain colored", label: "Insomnia" },
     { icon: "devicon-figma-plain colored", label: "Figma" },
